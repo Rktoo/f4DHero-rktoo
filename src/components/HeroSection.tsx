@@ -16,10 +16,10 @@ const HeroSection = () => {
   const { isDarkTheme } = themeContext;
 
   return (
-    <section className={`hero-section max-w-6xl mx-auto px-10 bg-dark ${isDarkTheme ? " text-white" : " text-black"} py-5 h-full`}>
+    <section className={`hero-section max-w-6xl mx-auto px-10 bg-dark ${isDarkTheme ? " text-white" : " text-black"} py-5 h-full z-20`}>
 
       <div className="container mx-auto text-center">
-        <figure className='logo mb-8'>
+        <figure className='logo mb-8 '>
           {
             isDarkTheme ?
               <IconF4dDark />
@@ -27,8 +27,8 @@ const HeroSection = () => {
               <IconF4dWhite />
           }
         </figure>
-        <div className='w-full flex justify-center items-center'>
-          <h2 className="max-w-lg text-3xl">
+        <div className='w-full flex justify-center items-center  z-20'>
+          <h2 className="max-w-lg text-3xl  z-20">
             <span className="font-semibold">Solutions</span>
             <span className="font-thin"> de développement </span>
             <span className="font-semibold">rapides</span> et <span className="font-semibold">flexibles</span> avec
@@ -52,7 +52,7 @@ const HeroSection = () => {
 
         {/* Description */}
         <div className='w-full flex justify-center'>
-          <p className="max-w-4xl mt-6 text-start text-lg font-thin">
+          <p className="max-w-4xl mt-6 text-center text-lg font-thin">
             Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.
           </p>
         </div>
@@ -70,10 +70,7 @@ const HeroSection = () => {
 
       </div>
 
-      {/* Animation des cubes */}
-      <div>
-        <Image src={"/images/cube-in-left-large"} width={200} height={200} alt='Cube in left' />
-      </div>
+
     </section >
   )
 }

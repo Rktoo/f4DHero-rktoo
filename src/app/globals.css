@@ -136,4 +136,13 @@ body {
       transform: rotate(360deg);
     }
   }
+
+}
+
+@layer {
+
+  #logodark,
+  #logowhite {
+    z-index: 100;
+  }
 }

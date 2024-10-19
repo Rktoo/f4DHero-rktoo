@@ -1,27 +1,32 @@
 "use client";
-import React from "react";
- 
+import React, { useEffect } from "react";
+
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import {useTheme } from "@/lib/ThemeContext";
+import { useTheme } from "@/lib/ThemeContext";
+import Image from "next/image";
+import CubeAnimation from "@/components/CubeAnimation";
 
 
- 
- 
+
+
 const Home = () => {
   const { isDarkTheme } = useTheme();
+
+
   return (
     <div
-      className={`  ${
-        isDarkTheme
-          ? "bg-gradient-to-b from-[#070b14] to-[#07071b] text-white"
-          : "bg-white text-black"
-      }`}
+      className={`  ${isDarkTheme
+        ? "bg-gradient-to-b from-[#070b14] to-[#07071b] text-white"
+        : "bg-white text-black"
+        } relative`}
     >
-  <Navbar />
+      <Navbar />
       <HeroSection />
-   
+      {/* Animation des cubes */}
+
+      <CubeAnimation />
     </div>
   );
 };
