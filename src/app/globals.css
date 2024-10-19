@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #47715B;
+  font-family: 'Gilroy', sans-serif;
+  background-color: #E1E1E1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance; /* Note: Cette propriété n'est pas standard */
+  }
+
+  .text-marquee-container {
+    width: 100vw; /* Utiliser toute la largeur de la vue */
+    overflow: hidden; /* S'assurer que le texte ne dépasse pas les limites */
+  }
+
+  .text-marquee {
+    display: inline-block; /* Afficher le texte en ligne pour le défilement horizontal */
+    min-width: 100%; /* Assurer que l'élément a une largeur minimale pour afficher tout le texte */
+    animation: marquee 30s linear infinite; /* Ajoute l'animation pour le défilement */
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@media (max-width: 768px) { /* Cible les écrans de taille mobile */
+  .text-marquee {
+    animation: marquee-mobile 15s linear infinite; /* Animation plus rapide pour mobile */
+  }
+
+  @keyframes marquee-mobile {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* styles/globals.css */
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.custom-blur {
+  filter: blur(8px);
+}
