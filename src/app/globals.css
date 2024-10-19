@@ -24,39 +24,50 @@ body {
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance; /* Note: Cette propriété n'est pas standard */
+    text-wrap: balance;
+    /* Note: Cette propriété n'est pas standard */
   }
 
   .text-marquee-container {
-    width: 100vw; /* Utiliser toute la largeur de la vue */
-    overflow: hidden; /* S'assurer que le texte ne dépasse pas les limites */
+    width: 100vw;
+    /* Utiliser toute la largeur de la vue */
+    overflow: hidden;
+    /* S'assurer que le texte ne dépasse pas les limites */
   }
 
   .text-marquee {
-    display: inline-block; /* Afficher le texte en ligne pour le défilement horizontal */
-    min-width: 100%; /* Assurer que l'élément a une largeur minimale pour afficher tout le texte */
-    animation: marquee 30s linear infinite; /* Ajoute l'animation pour le défilement */
+    display: inline-block;
+    /* Afficher le texte en ligne pour le défilement horizontal */
+    min-width: 100%;
+    /* Assurer que l'élément a une largeur minimale pour afficher tout le texte */
+    animation: marquee 30s linear infinite;
+    /* Ajoute l'animation pour le défilement */
   }
 
   @keyframes marquee {
     0% {
       transform: translateX(100%);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
 }
 
-@media (max-width: 768px) { /* Cible les écrans de taille mobile */
+@media (max-width: 768px) {
+
+  /* Cible les écrans de taille mobile */
   .text-marquee {
-    animation: marquee-mobile 15s linear infinite; /* Animation plus rapide pour mobile */
+    animation: marquee-mobile 15s linear infinite;
+    /* Animation plus rapide pour mobile */
   }
 
   @keyframes marquee-mobile {
     0% {
       transform: translateX(100%);
     }
+
     100% {
       transform: translateX(-100%);
     }
@@ -81,4 +92,48 @@ body {
 
 .custom-blur {
   filter: blur(8px);
+}
+
+/* Fond pour l'animation de bordure */
+.dark {
+  --bg-color: #070818;
+}
+
+.light {
+  --bg-color: white;
+}
+
+/* Animation de la bordure */
+@layer {
+  .border-animate {
+    overflow: hidden;
+  }
+
+  .border-animate::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 50%;
+    background-color: #4960FF;
+    animation: animate 4s linear infinite;
+  }
+
+  .border-animate::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    /*Border radius de l'élément*/
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
