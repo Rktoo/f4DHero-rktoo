@@ -24,7 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
           }
         </figure>
         <div className='w-full flex justify-center items-center z-[110]'>
-          <h2 className="max-w-lg md:max-w-3xl text-3xl md:text-5xl font-thin tracking-widest z-[110]">
+          <h2 className="max-w-lg md:max-w-3xl text-3xl md:text-5xl font-thin tracking-wider z-[110]">
             <span className="font-semibold">Solutions</span>
             <span> de développement </span>
             <span className="font-semibold">rapides</span> et <span className="font-semibold">flexibles</span> avec
@@ -32,14 +32,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
         </div>
 
         <div className='w-full flex justify-center bordure z-[110]' >
-          <div className={`relative flex justify-center items-center gap-4 mt-8 px-10 py-4 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
+          <div className={`relative flex justify-center items-center gap-4 mt-8 px-20 py-6 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
             {/* Logo Strapi */}
-            <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={100} height={60} />
+            <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={140} height={140} />
 
-            <span className="text-xl font-bold z-30">&</span>
+            <span className="text-3xl font-bold z-[110]">&</span>
 
             {/* Logo Next.js */}
-            <Image src={`/images/Next-JS-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Next.js Logo" className='nextjs' width={80} height={40} />
+            <Image src={`/images/Next-JS-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Next.js Logo" className='nextjs' width={100} height={100} />
           </div>
         </div>
 
