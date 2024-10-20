@@ -168,8 +168,8 @@ export default function CubesAnimation() {
             ref={cubesContainerRef}
             className="absolute 
         top-1/3 
-        translate-x-0 
-        md:transform 
+        transform
+        translate-x-0  
         max-md:translate-x-[10%] 
         max-lg:translate-x-[18%] 
         lg:-translate-y-[15%] 
