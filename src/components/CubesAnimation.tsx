@@ -27,7 +27,7 @@ export default function CubesAnimation() {
         } else if (windowWidth < 768) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
-            thirdLRect = { x: 20, y: 130 };
+            thirdLRect = { x: 20, y: 80 };
 
             updateCubesContainerClasses();
 
