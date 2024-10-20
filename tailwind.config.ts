@@ -28,7 +28,6 @@ export default {
         'spin-reverse': 'spin-reverse 1s linear infinite',
         'spin-reverse-slow': 'spin-reverse 4s linear infinite',
         'spin-reverse-slower': 'spin-reverse 6s linear infinite',
-       'border-animate': 'border-animate 2s ease-in-out infinite',
       },
       borderRadius: {
         '4xl': '2rem',
@@ -52,11 +51,6 @@ export default {
         },
         'spin-reverse': {
           to: { transform: 'rotate(-360deg)' },
-        },
-        'border-animate': {
-          '0%': { transform: 'translateX(-100%)' },
-          '50%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(100%)' },
         },
       },
       maxWidth: {
