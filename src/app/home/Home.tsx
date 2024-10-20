@@ -1,19 +1,15 @@
 "use client";
-import React, { useEffect } from "react";
-
-
+import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { useTheme } from "@/lib/ThemeContext";
-import Image from "next/image";
-import CubeAnimation from "@/components/CubeAnimation";
+import CubesAnimation from "@/components/CubesAnimation";
 
 
 
 
 const Home = () => {
   const { isDarkTheme } = useTheme();
-
 
   return (
     <div
@@ -23,10 +19,12 @@ const Home = () => {
         } relative`}
     >
       <Navbar />
-      <HeroSection />
-      {/* Animation des cubes */}
 
-      <CubeAnimation />
+      <HeroSection isDarkTheme={isDarkTheme} />
+
+      {/* Animation des cubes */}
+      <CubesAnimation />
+
     </div>
   );
 };

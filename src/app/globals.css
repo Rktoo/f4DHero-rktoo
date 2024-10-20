@@ -17,9 +17,12 @@
 }
 
 body {
+  @apply min-w-80 !important;
   color: #47715B;
   font-family: 'Gilroy', sans-serif;
   background-color: #E1E1E1;
+  overflow-x: hidden;
+
 }
 
 @layer utilities {
@@ -107,6 +110,7 @@ body {
 @layer {
   .border-animate {
     overflow: hidden;
+    z-index: 100 !important;
   }
 
   .border-animate::before {
@@ -124,7 +128,7 @@ body {
     inset: 2px;
     background-color: var(--bg-color);
     border-radius: 6px;
-    /*Border radius de l'élément*/
+    z-index: 100;
   }
 
   @keyframes animate {
@@ -140,9 +144,20 @@ body {
 }
 
 @layer {
+  nav {
+    z-index: 150 !important;
+  }
+
+  .strapi,
+  .nextjs {
+    z-index: 120 !important;
+  }
 
   #logodark,
   #logowhite {
     z-index: 100;
+    @apply max-sm:w-64 max-md:w-96 mr-4 md:mr-10 !important;
   }
+
+
 }
