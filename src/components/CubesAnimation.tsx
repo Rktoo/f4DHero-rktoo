@@ -23,41 +23,34 @@ export default function CubesAnimation() {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 70 };
-            updateCubesContainerClasses(true);
+            updateCubesContainerClasses();
         } else if (windowWidth < 768) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
 
-            updateCubesContainerClasses(true);
+            updateCubesContainerClasses();
 
         } else if (windowWidth < 1024){
             firstLRect = { x: 0, y: -90, rotation: -45 };
             secondLRect = { x: -40, y: -170 };
             thirdLRect = { x: 40, y: 100 };
 
-            updateCubesContainerClasses(false);
+            updateCubesContainerClasses();
 } else {
             firstLRect = { x: 0, y: -100, rotation: -45 };
             secondLRect = { x: -40, y: -170 };
             thirdLRect = { x: 40, y: 200 };
-updateCubesContainerClasses(false);
+            updateCubesContainerClasses();
         }
     };
 
-    const updateCubesContainerClasses = (mobile) => {
+    const updateCubesContainerClasses = () => {
         if (cubesContainerRef?.current) {
-if(mobile){
-
             cubesContainerRef.current.classList.remove("max-md:translate-x-[10%]");
             cubesContainerRef.current.classList.remove("max-lg:translate-x-[18%]");
             cubesContainerRef.current.classList.add("translate-x-0");
-} else {
-cubesContainerRef.current.classList.adf("max-md:translate-x-[10%]");
-            cubesContainerRef.current.classList.adf("max-lg:translate-x-[18%]");
-            cubesContainerRef.current.classList.remove("translate-x-0");
-}
-        }
+            }
     };
     useEffect(() => {
 
