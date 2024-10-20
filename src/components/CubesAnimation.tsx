@@ -176,6 +176,7 @@ export default function CubesAnimation() {
                         className='absolute 
                         left-10 w-44 sm:w-64 md:w-[462px]
                         '
+                        priority
                         width={200}
                         height={200}
                         alt='Cube in left'
