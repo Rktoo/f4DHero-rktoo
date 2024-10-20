@@ -165,7 +165,8 @@ export default function CubesAnimation() {
         md:transform 
         max-md:translate-x-[10%] 
         max-lg:translate-x-[18%] 
-        lg:-translate-y-[15%] w-full"
+        lg:-translate-y-[15%] 
+        w-full"
         >
             <div className="relative top-0 w-full flex flex-col md:flex-row justify-center ">
                 <div className="block">

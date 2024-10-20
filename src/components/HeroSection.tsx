@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
     <section className={`hero-section max-w-6xl mx-auto px-10 bg-dark ${isDarkTheme ? " text-white" : " text-black"} py-5 h-full z-[110] overflow-y-hidden`}>
 
       <div className="container mx-auto text-center">
-        <figure className='logo mb-8 '>
+        <figure className='logo mb-4 '>
           {
             isDarkTheme ?
               <IconF4dDark />
@@ -24,7 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
           }
         </figure>
         <div className='w-full flex justify-center items-center z-[110]'>
-          <h2 className="max-w-lg text-3xl font-thin tracking-widest z-[110]">
+          <h2 className="max-w-lg md:max-w-3xl text-3xl md:text-5xl font-thin tracking-widest z-[110]">
             <span className="font-semibold">Solutions</span>
             <span> de développement </span>
             <span className="font-semibold">rapides</span> et <span className="font-semibold">flexibles</span> avec
@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
         </div>
 
         <div className='w-full flex justify-center bordure z-[110]' >
-          <div className={`relative flex justify-center items-center gap-4 mt-4 px-10 py-4 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
+          <div className={`relative flex justify-center items-center gap-4 mt-8 px-10 py-4 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
             {/* Logo Strapi */}
             <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={100} height={60} />
 
@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
 
         {/* Description */}
         <div className='w-full flex justify-center z-[110]'>
-          <p className={`max-w-6xl mt-6 text-center text-lg font-thin ${isDarkTheme ? "text-[#5D6066]" : "text-black"} z-[100]`}>
+          <p className={`max-w-6xl mt-8 text-center text-lg font-thin ${isDarkTheme ? "text-[#5D6066]" : "text-black"} z-[100]`}>
             Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.
           </p>
         </div>
