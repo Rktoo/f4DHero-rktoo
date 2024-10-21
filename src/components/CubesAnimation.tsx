@@ -35,11 +35,6 @@ export default function CubesAnimation() {
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
 
-        } else if (windowWidth < 1024) {
-            firstLRect = { x: 0, y: -25, rotation: -45 };
-            secondLRect = { x: -20, y: -90 };
-            thirdLRect = { x: 20, y: 130 };
-
         } else {
             firstLRect = { x: 0, y: -100, rotation: -45 };
             secondLRect = { x: -40, y: -170 };

@@ -117,7 +117,7 @@ body {
     position: absolute;
     width: 110%;
     height: 50%;
-    background-color: #4960FF;
+    background-color: #3b82f6;
     animation: animate-border 4s linear infinite;
   }
 
