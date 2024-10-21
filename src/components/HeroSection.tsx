@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
         </div>
 
         <div className='w-full flex justify-center bordure z-[110]' >
-          <div className={`relative flex justify-center items-center gap-4 mt-8 px-12  md:px-12 py-1 md:py-2 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
+          <div className={`relative flex justify-center items-center gap-4 mt-8 px-12 py-1 md:py-2 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
             {/* Logo Strapi */}
             <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={200} height={200} />
 
