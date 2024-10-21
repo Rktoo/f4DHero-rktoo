@@ -163,7 +163,7 @@ body {
   #logodark,
   #logowhite {
     z-index: 100;
-    @apply max-sm:w-64 max-md:w-96 mr-4 md:mr-10 !important;
+    @apply max-sm:w-80 max-md:w-96 mr-4 md:mr-10 !important;
   }
 
 
