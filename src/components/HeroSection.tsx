@@ -34,12 +34,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
         <div className='w-full flex justify-center bordure z-[110]' >
           <div className={`relative flex justify-center items-center gap-4 mt-8 px-16  md:px-20 py-3 md:py-6 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
             {/* Logo Strapi */}
-            <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={140} height={140} />
+            <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={200} height={200} />
 
             <span className="text-3xl font-bold z-[110]">&</span>
 
             {/* Logo Next.js */}
-            <Image src={`/images/Next-JS-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Next.js Logo" className='nextjs' width={100} height={100} />
+            <Image src={`/images/Next-JS-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Next.js Logo" className='nextjs' width={150} height={150} />
           </div>
         </div>
 

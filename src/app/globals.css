@@ -17,11 +17,10 @@
 }
 
 body {
-  @apply min-w-80 !important;
+  @apply min-w-80 overflow-x-hidden !important;
   color: #47715B;
   font-family: 'Gilroy', sans-serif;
   background-color: #E1E1E1;
-  overflow-x: hidden;
 
 }
 
@@ -145,12 +144,20 @@ body {
 
 @layer {
   nav {
-    z-index: 150 !important;
+    z-index: 200 !important;
   }
 
   .strapi,
   .nextjs {
     z-index: 120 !important;
+  }
+
+  .strapi {
+    @apply w-[150px] md:w-[180px];
+  }
+
+  .nextjs {
+    @apply w-[120px] md:w-[150px];
   }
 
   #logodark,

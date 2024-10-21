@@ -15,16 +15,15 @@ const Navbar: FC = () => {
 
   return (
     <nav
-      className={`h-[80px] md:py-[31px] px-[10%] md:px-[81px] flex justify-between items-center relative z-[10] border-b-0   `}
+      className={`h-[80px] md:py-[31px] px-[10%] md:px-[81px] flex justify-between items-center relative z-[10] border-b-0 `}
     >
       <div
         id="logoFrench4Dev"
         className="flex items-center justify-between w-full md:w-auto z-[10]"
       >
         <div
-          className={`text-[24px] font-bold ${
-            isDarkTheme ? "text-white" : "text-black"
-          }`}
+          className={`text-[24px] font-bold ${isDarkTheme ? "text-white" : "text-black"
+            }`}
         >
           FRENCH4 <span className="text-blue-500">DEV.</span>
         </div>
@@ -35,9 +34,8 @@ const Navbar: FC = () => {
       </div>
 
       <ul
-        className={`fixed top-0 left-0 h-full w-[250px] bg-black z-[1] flex flex-col items-center gap-4 pt-20 transition-transform transform ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 md:flex-row md:w-auto md:pt-0 md:bg-transparent md:flex md:items-center md:gap-[40px]`}
+        className={`fixed top-0 left-0 h-full w-[250px] bg-black z-[1] flex flex-col items-center gap-4 pt-20 transition-transform transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          } md:relative md:translate-x-0 md:flex-row md:w-auto md:pt-0 md:bg-transparent md:flex md:items-center md:gap-[40px]`}
       >
         {["Services", "Portfolio", "Blog", "Contact"].map((link) => (
           <li
@@ -50,11 +48,9 @@ const Navbar: FC = () => {
           >
             <Link
               href="#"
-              className={`block py-2 md:py-0 ${
-                activeLink === link ? "font-bold opacity-100" : "opacity-50"
-              } transition-opacity duration-300 ${
-                isDarkTheme ? "text-white" : "text-black"
-              }`}
+              className={`block py-2 md:py-0 ${activeLink === link ? "font-bold opacity-100" : "opacity-50"
+                } transition-opacity duration-300 ${isDarkTheme ? "text-white" : "text-black"
+                }`}
             >
               {link}
             </Link>

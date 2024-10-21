@@ -23,49 +23,29 @@ export default function CubesAnimation() {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 70 };
-            updateCubesContainerClasses(true);
+
         } else if (windowWidth < 768) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 80 };
 
-            updateCubesContainerClasses(true);
-
         } else if (windowWidth < 1024) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
 
-            updateCubesContainerClasses(true);
-
         } else if (windowWidth < 1024) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
-
-            updateCubesContainerClasses(false);
 
         } else {
             firstLRect = { x: 0, y: -100, rotation: -45 };
             secondLRect = { x: -40, y: -170 };
             thirdLRect = { x: 40, y: 200 };
-            updateCubesContainerClasses(false);
         }
     };
 
-    const updateCubesContainerClasses = (isMobileDevice: boolean) => {
-        if (cubesContainerRef?.current) {
-            if (isMobileDevice) {
-                cubesContainerRef.current.classList.remove("max-md:translate-x-[10%]");
-                cubesContainerRef.current.classList.remove("max-lg:translate-x-[18%]");
-                cubesContainerRef.current.classList.add("translate-x-0");
-            } else {
-                cubesContainerRef.current.classList.remove("translate-x-0");
-                cubesContainerRef.current.classList.add("max-md:translate-x-[10%]");
-                cubesContainerRef.current.classList.add("max-lg:translate-x-[18%]");
-            }
-        }
-    };
     useEffect(() => {
 
         if (secondRightCubeRef) {
@@ -183,9 +163,8 @@ export default function CubesAnimation() {
             className="absolute 
         top-1/3 
         transform 
-        translate-x-0 
-        max-md:translate-x-[10%] 
-        max-lg:translate-x-[18%] 
+        sm:translate-x-0
+        md:translate-x-0
         lg:-translate-y-[15%] 
         w-full"
         >
@@ -216,7 +195,7 @@ export default function CubesAnimation() {
                     <Image
                         ref={thirdLeftCubeRef}
                         src={"/images/cube-in-left-small.png"}
-                        className="absolute -top-12 lg:-top-44 left-28 md:left-56 lg:left-64 w-44 sm:w-64 md:w-[462px]"
+                        className="absolute -top-12 lg:-top-64 left-28 md:left-56 lg:left-64 w-44 sm:w-64 md:w-[462px]"
                         width={200}
                         height={200}
                         alt='Cube in left'
