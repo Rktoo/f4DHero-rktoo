@@ -23,49 +23,37 @@ export default function CubesAnimation() {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 70 };
-            updateCubesContainerClasses(true);
+            
         } else if (windowWidth < 768) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 80 };
 
-            updateCubesContainerClasses(true);
+            
 
         } else if (windowWidth < 1024) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
 
-            updateCubesContainerClasses(true);
+            
 
         } else if (windowWidth < 1024) {
             firstLRect = { x: 0, y: -25, rotation: -45 };
             secondLRect = { x: -20, y: -90 };
             thirdLRect = { x: 20, y: 130 };
 
-            updateCubesContainerClasses(false);
+            
 
         } else {
             firstLRect = { x: 0, y: -100, rotation: -45 };
             secondLRect = { x: -40, y: -170 };
             thirdLRect = { x: 40, y: 200 };
-            updateCubesContainerClasses(false);
+            
         }
     };
 
-    const updateCubesContainerClasses = (isMobileDevice: boolean) => {
-        if (cubesContainerRef?.current) {
-            if (isMobileDevice) {
-                cubesContainerRef.current.classList.remove("max-md:translate-x-[10%]");
-                cubesContainerRef.current.classList.remove("max-lg:translate-x-[18%]");
-                cubesContainerRef.current.classList.add("translate-x-0");
-            } else {
-                cubesContainerRef.current.classList.remove("translate-x-0");
-                cubesContainerRef.current.classList.add("max-md:translate-x-[10%]");
-                cubesContainerRef.current.classList.add("max-lg:translate-x-[18%]");
-            }
-        }
-    };
+    
     useEffect(() => {
 
         if (secondRightCubeRef) {
