@@ -1,8 +1,9 @@
 import gsap from "gsap";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CubesAnimation() {
+    const [timer, setTime] = useState<number>(2000);
     const firstLeftCubeRef = useRef<HTMLImageElement | null>(null);
     const secondLeftCubeRef = useRef<HTMLImageElement | null>(null);
     const thirdLeftCubeRef = useRef<HTMLImageElement | null>(null);
@@ -62,10 +63,10 @@ export default function CubesAnimation() {
                     onYoyo: () => {
                         const t1 = setTimeout(() => {
                             startAnimationLeft();
-                        }, 1000);
+                        }, timer / 2);
                         const t2 = setTimeout(() => {
                             startAnimationRight()
-                        }, 2000)
+                        }, timer)
 
                     }
                 }
