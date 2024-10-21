@@ -75,7 +75,7 @@ export default function CubesAnimation() {
                     x: 50,
                     y: 70,
                     duration: 2,
-                    ease: "power1.inOut",
+                    ease: "power3.inOut",
                     repeat: -1,
                     yoyo: true,
                     repeatDelay: 2,
@@ -100,7 +100,7 @@ export default function CubesAnimation() {
                         x: -20,
                         y: 60,
                         duration: 2,
-                        ease: "power1.inOut",
+                        ease: "power3.inOut",
                         repeat: -1,
                         yoyo: true,
                         repeatDelay: 2
@@ -112,7 +112,7 @@ export default function CubesAnimation() {
                         x: 30,
                         y: -50,
                         duration: 2,
-                        ease: "power1.inOut",
+                        ease: "power3.inOut",
                         repeat: -1,
                         yoyo: true,
                         repeatDelay: 2
@@ -128,7 +128,7 @@ export default function CubesAnimation() {
                     rotation: firstLRect.rotation,
                     y: firstLRect.y,
                     duration: 2,
-                    ease: "power1.inOut",
+                    ease: "power3.inOut",
                     repeat: -1,
                     yoyo: true,
                     repeatDelay: 2
@@ -139,7 +139,7 @@ export default function CubesAnimation() {
                         x: secondLRect.x,
                         y: secondLRect.y,
                         duration: 2,
-                        ease: "power1.inOut",
+                        ease: "power3.inOut",
                         repeat: -1,
                         yoyo: true,
                         repeatDelay: 2
@@ -150,7 +150,7 @@ export default function CubesAnimation() {
                         x: thirdLRect.x,
                         y: thirdLRect.y,
                         duration: 2,
-                        ease: "power1.inOut",
+                        ease: "power3.inOut",
                         repeat: -1,
                         yoyo: true,
                         repeatDelay: 2
