@@ -36,7 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
             {/* Logo Strapi */}
             <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={200} height={200} />
 
-            <span className="text-3xl font-bold z-[110]">&</span>
+            <span className="md:mt-1 text-3xl font-bold z-[110]">&</span>
 
             {/* Logo Next.js */}
             <Image src={`/images/Next-JS-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Next.js Logo" className='nextjs' width={150} height={150} />
