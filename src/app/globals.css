@@ -116,7 +116,7 @@ body {
     content: "";
     position: absolute;
     width: 150%;
-    height: 25%;
+    height: 40%;
     background-color: #3b82f6;
     animation: animate-border 4s linear infinite;
   }
@@ -124,7 +124,7 @@ body {
   .border-animate::after {
     content: "";
     position: absolute;
-    inset: 1px;
+    inset: 1.5px;
     background-color: var(--bg-color);
     border-radius: 6px;
     z-index: 100;
