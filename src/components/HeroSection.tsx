@@ -12,7 +12,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
 
   return (
-    <section className={`hero-section max-w-6xl mx-auto px-10 bg-dark ${isDarkTheme ? " text-white" : " text-black"} py-5 h-full z-[110] overflow-y-hidden`}>
+    <section className={`hero-section max-w-6xl mx-auto -mt-10 md:mt-0 px-10 py-5 bg-dark ${isDarkTheme ? " text-white" : " text-black"}  h-full z-[110] overflow-y-hidden`}>
 
       <div className="container mx-auto text-center">
         <figure className='logo mb-4 '>
