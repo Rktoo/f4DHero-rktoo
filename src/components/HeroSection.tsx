@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
         </div>
 
         <div className='w-full flex justify-center bordure z-[110]' >
-          <div className={`relative flex justify-center items-center gap-4 mt-8 px-16  md:px-20 py-3 md:py-6 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
+          <div className={`relative flex justify-center items-center gap-4 mt-8 px-16  md:px-20 py-2 md:py-3 border border-[#4960FF] rounded-md border-animate z-[110] ${isDarkTheme ? "dark" : "light"}`}>
             {/* Logo Strapi */}
             <Image src={`/images/Strapi-logo-${isDarkTheme ? "white" : "black"}.png`} alt="Strapi Logo" className='mt-1 strapi' width={200} height={200} />
 
@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkTheme }) => {
 
         {/* Description */}
         <div className='w-full flex justify-center z-[110]'>
-          <p className={`max-w-6xl mt-8 text-center text-lg font-thin ${isDarkTheme ? "text-[#5D6066]" : "text-black"} z-[100]`}>
+          <p className={`max-w-6xl mt-8 text-center text-lg font-thin z-[100]`}>
             Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.
           </p>
         </div>
